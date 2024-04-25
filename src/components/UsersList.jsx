@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchUsers, addUser } from "../store";
 import Button from "./Button";
 import Skeleton from "./Skeleton";
+import useThunk from "../hooks/useThunk";
 
 export default function UsersList() {
-  const [isLoadingUsers, setIsLoadingUsers] = useState(false);
-  const [loadingUsersError, setLoadingUsersError] = useState(null);
+  const [doFetchUsers, isLoadingUsers, loadingUsersError] = useThunk(fetchUsers)
 
   const dispatch = useDispatch();
   const { data, isLoading, error } = useSelector((state) => {
@@ -14,12 +14,8 @@ export default function UsersList() {
   });
 
   useEffect(() => {
-    setIsLoadingUsers(true);
-    dispatch(fetchUsers())
-      .unwrap()
-      .catch((err) => setLoadingUsersError(err))
-      .finally(() => setIsLoadingUsers(false));
-  }, []);
+    doFetchUsers()
+  }, [doFetchUsers]);
 
   const handleUserAdd = () => {
     dispatch(addUser());
