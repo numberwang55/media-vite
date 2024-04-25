@@ -1,6 +1,30 @@
 {
-  "users": [ {"id": 1, "name": "myra"} ],
+  "users": [
+    {
+      "id": "1",
+      "name": "myra"
+    },
+    {
+      "id": "cbf5",
+      "name": "Joelle"
+    },
+    {
+      "id": "fc42",
+      "name": "Rickie"
+    },
+    {
+      "id": "9102",
+      "name": "Cody Muller"
+    },
+    {
+      "id": "303c",
+      "name": "Regina Dibbert-Rutherford"
+    },
+    {
+      "id": "321c",
+      "name": "Derrick Moen I"
+    }
+  ],
   "albums": [],
   "photos": []
 }
-
