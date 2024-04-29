@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "1",
-      "name": "myra"
+      "name": "Myra"
     },
     {
       "id": "cbf5",
@@ -29,6 +29,12 @@
       "name": "Shaun Jacobi"
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "id": 10,
+      "title": "Hiking Trip",
+      "userId": 1
+    }
+  ],
   "photos": []
 }
