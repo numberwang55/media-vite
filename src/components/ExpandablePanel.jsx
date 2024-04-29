@@ -2,20 +2,22 @@ import { useState } from "react";
 import { GoChevronDown, GoChevronLeft } from "react-icons/go";
 
 export default function ExpandablePanel({ children, header }) {
-  const [expanded, setExpanded] = useState(false)
+  const [expanded, setExpanded] = useState(false);
   const handleClick = () => {
-    setExpanded(!expanded)
-  }
+    setExpanded(!expanded);
+  };
 
   return (
     <div className="mb-2 border rounded">
       <div className="flex p-2 justify-between items-center">
-        <div className="flex flex-row items-center justify-between">{header}</div>
+        <div className="flex flex-row items-center justify-between">
+          {header}
+        </div>
         <div onClick={handleClick} className="cursor-pointer text-xl">
-        {expanded ? <GoChevronDown/> : <GoChevronLeft/>}
+          {expanded ? <GoChevronDown /> : <GoChevronLeft />}
         </div>
       </div>
-      { expanded && <div className="p-2 border-t">{children}</div>}
+      {expanded && <div className="p-2 border-t">{children}</div>}
     </div>
   );
 }
