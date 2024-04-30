@@ -13,7 +13,7 @@ export default function AlbumsList({ user }) {
 
   let content;
   if (isLoading) {
-    content = <Skeleton times={3} />;
+    content = <Skeleton times={3} className="h-10 w-full"/>;
   } else if (error) {
     content = <div>Error Loading Albums</div>;
   } else {
