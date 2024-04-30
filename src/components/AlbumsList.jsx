@@ -8,8 +8,8 @@ export default function AlbumsList({ user }) {
   const [addAlbum, results] = useAddAlbumMutation();
 
   const handleAddAlbum = () => {
-    addAlbum(user)
-  }
+    addAlbum(user);
+  };
 
   let content;
   if (isLoading) {
@@ -29,7 +29,10 @@ export default function AlbumsList({ user }) {
 
   return (
     <div>
-      <div>Albums for {user.name} <Button onClick={handleAddAlbum}>+ Add Album</Button></div>
+      <div className="m-2 flex flex-row items-center justify-between">
+        <h3 className="text-lg font-bold">Albums for {user.name}</h3>
+        <Button onClick={handleAddAlbum} loading={results.isLoading}>+ Add Album</Button>
+      </div>
       <div>{content}</div>
     </div>
   );
