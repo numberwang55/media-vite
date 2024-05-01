@@ -66,5 +66,11 @@
       "title": "Incredible Soft Tuna"
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "id": "0107",
+      "albumId": "0f1e",
+      "url": "https://loremflickr.com/150/150/abstract?lock=695028494106624"
+    }
+  ]
 }
